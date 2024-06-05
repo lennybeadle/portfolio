@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "./markdown.css";
+
+* {
+  font-family: "Hind";
+}
+
+
+h1 {
+  font-family: 'Exo', sans-serif;
+}
+body {
+  @apply dark:bg-black dark:text-white;
+}
+
+.logo {
+  display: inline-flex;
+  flex-direction: row-reverse;
+}
+.logo img {
+ margin-right: 10px;
+}
+
+.gradient-circle {
+  position: absolute;
+  pointer-events: none;
+  z-index: 100;
+  top: -30px;
+  height: 40px;
+  width: 100vw;
+  opacity: 0.5;
+  filter: blur(40px);
+  background: radial-gradient(
+    circle,
+    rgba(248, 107, 223, 1) 0%,
+    rgba(107, 107, 248, 0.8) 100%
+  );
+}
+.gradient-circle-bottom {
+  position: absolute;
+  pointer-events: none;
+  z-index: 100;
+  bottom: -20px;
+  height: 30px;
+  width: 100vw;
+  opacity: 0.5;
+  filter: blur(40px);
+  background: radial-gradient(
+    circle,
+    rgba(248, 107, 223, 1) 0%,
+    rgba(107, 107, 248, 0.8) 100%
+  );
+}
+
+.gradient-shadow:hover::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(-45deg, #45caff 0%, #ff1b6b 100%);
+  transform: translate3d(0px, 20px, 0) scale(0.95);
+  filter: blur(20px);
+  opacity: var(0.7);
+  transition: opacity 0.3s;
+  border-radius: inherit;
+}
+.lottie-divider {
+margin-top: 2em;
+}
+
+h1, h2, h3, h4, h5, h6, a, button {
+  text-shadow: 0px 0px 6px white;
+}
+p, div, span {
+  text-shadow: 0px 0px 3px white;
+
+}
+
+.p-2 img {
+  filter: drop-shadow(2px 4px 4px black);
+opacity: 0.7;
+}
+.p-2 div:hover {
+  filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.2));
+  transition: 0.2s ease-in-out;
+transform: scale(1.01) translateX(-1px);
+  opacity: 1;
+}
+
+.cursor-none {
+  overflow: hidden;
+}
+
+.lottie-divider,
+.lottie-divider2{
+
+  overflow: auto;
+  filter: grayscale(1);
+  transform: scale(1.3);
+  opacity: 0.1;
+}
+.lottie-divider2 {
+  margin-top: 1em;
+  transform: scale(1.3) scaleY(-1) scaleX(-1);
+}
+
+.hero-images {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero-images img {
+position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  animation-name: spin;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  filter: grayscale(0.2);
+}
+
+.hero-images img:nth-child(1) {
+  z-index: 1;
+  animation-name: clockwise;
+}
+
+.hero-images img:nth-child(2) {
+  z-index: 2;
+  animation-name: counterclockwise;
+}
+
+.hero-images img:nth-child(3) {
+  z-index: 3;
+  animation-name: clockwise;
+}
+
+@keyframes clockwise {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes counterclockwise {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+/* 
+* Prevents issues when the parent creates a 
+* stacking context. (For example, using the transform
+* property )
+*/
+.gradient-shadow:hover::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: inherit;
+  border-radius: inherit;
+}
+
+.bg-white {
+  background-color: transparent;
+}
+
+.particles-container {
+  position: relative;
+}
+
+.particles-js-canvas-el {
+  position: absolute !important;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+
+@media (max-width: 767px) {
+  #hero {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+  }
+
+  .hero-text{
+    margin-top: 20em;
+    text-align: center;
+    justify-content: center;
+  }
+}
