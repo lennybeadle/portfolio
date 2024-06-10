@@ -69,7 +69,7 @@ const Header = ({ handleTeamScroll, handleWorkScroll, handleAboutScroll, isBlog 
             >
               {!isBlog ? (
                 <div className="grid grid-cols-1">
-                  <Button onClick={handleWorkScroll}>Portfolio</Button>
+                  <Button onClick={handleWorkScroll}>Services</Button>
                   {/* <Button onClick={handleTeamScroll}>Team</Button> */}
                   <Button onClick={handleAboutScroll}>About</Button>
                   {showBlog && (
@@ -133,12 +133,12 @@ const Header = ({ handleTeamScroll, handleWorkScroll, handleAboutScroll, isBlog 
           </h1>
         <img
           className="h-6"
-          src={`/images/200_ rps_logo.png`}>
+          src={`/images/200_rps_logo.png`}>
         </img>
             </div>
         {!isBlog ? (
           <div className="flex">
-            <Button onClick={handleWorkScroll}>Portfolio</Button>
+            <Button onClick={handleWorkScroll}>Services</Button>
             <Button onClick={handleAboutScroll}>About</Button>
             {/* <Button onClick={handleTeamScroll}>Team</Button> */}
             {showBlog && (

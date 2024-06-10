@@ -1,0 +1,22 @@
+"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+self["webpackHotUpdate_N_E"]("pages/index",{
+
+/***/ "./data/portfolio.json":
+/*!*****************************!*\
+  !*** ./data/portfolio.json ***!
+  \*****************************/
+/***/ (function(module) {
+
+module.exports = JSON.parse('{"name":"Smelly Digital","headerTaglineOne":"IT\'S TIME TO","headerTaglineTwo":"STAND OUT","headerTaglineThree":"","headerTaglineFour":"","showCursor":true,"showBlog":true,"darkMode":true,"showResume":true,"socials":[{"id":"2","title":"LinkedIn","link":"https://www.linkedin.com/company/smellydigital"},{"id":"3","title":"Facebook","link":"https://www.facebook.com/smellybrand"},{"id":"4","title":"Blog","link":"https://smelly.digital/blog"},{"id":"5","title":"Email","link":"mailto:hello@smelly.digital"}],"projects":[{"id":"1","title":"PLATFORM","description":"Website or Web App","imageSrc":"https://appinventiv.com/wp-content/uploads/2018/07/banner-Tutorial-for-Migrating-Your-Website-into-a-Progressive-Web-App-PWA-01.png","url":"mailto:hello@smelly.digital"},{"id":"2","title":"SEO","description":"Reach the top in your market","imageSrc":"https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/321532484/original/2b09f4711c52f00ed9c441136db92de678ec1b07/report-seo-of-your-website.jpeg","url":"mailto:hello@smelly.digital"},{"id":"3","title":"SOCIAL MEDIA","description":"Target and reach new audiences","imageSrc":"https://dingolab.com/wp-content/uploads/2020/07/gestione-social-network.jpg","url":"mailto:hello@smelly.digital"},{"id":"4","title":"LEAD GENERATION","description":"Guaranteed Leeds via paid advertising","imageSrc":"https://tradiedigital.co/wp-content/uploads/2021/05/goals-1.png","url":"mailto:hello@smelly.digital"}],"services":[{"id":"9989f1b8-5383-46a5-8c82-fa6e5beee33f","title":"Moby Dick","description":"Founder & Managing Partner","imageSrc":"https://uploads-ssl.webflow.com/6097a2499efec713b2cb1c07/6400da61ce90d45842bc6ef9_sw.jpeg"},{"id":"441cf043-1fe3-4b25-b026-7fa183243f79","title":"Seevi Kargwal","description":"Head of Design","imageSrc":"https://uploads-ssl.webflow.com/6097a2499efec713b2cb1c07/6401944b96905f144da41cc4_see%20(1)%20(1).png"}],"aboutpara":"Our company focuses on long-term and sustainable growth for brands that look to automate their marketing allowing them to step back to concentrate on more important things. Working in-house directly on your projects we are recognized for automating marketing processes, that are not only saving time and resources but also driving sustainable growth to enhance your strategic focus.","resume":{"tagline":"Chief Operations Officer","description":"The COO will take an equity payment, which is negotiable. You will be a senior-level executive who provides management, leadership and vision to ensure the organisation meets its short-term and long-term objectives. You will help create enduring policies and a company culture that strengthens the operational efficiency and generates us revenue. ","experiences":[{"id":"1","dates":"You have 2+ years of experience at a top-tier consulting firm, investment bank","type":" or private equity firm (or equivalent analytical and strategic role at top-tier organization) or 4+ years of experience at a high-growth technology company, ideally in a business/strategic role.","position":"You are the ultimate project manager, able to prioritize and execute on multiple important projects in parallel.","bullets":"You are highly personable and excel at building relationships."},{"id":"d495c23b-4f65-479a-9b8a-cfbc1c089725","dates":"You\'re well-connected in the startup & brand world.","type":"You have a strong interest in Web3 and NFTs and are already familiar with the blockchain ecosystem.","position":"","bullets":""}],"education":{"universityName":"Biz Ops","universityDate":"","universityPara":""},"languages":[],"frameworks":[],"others":[]}}');
+
+/***/ })
+
+});

@@ -1,5 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import styles from '../styles/hero-images.module.css';
+import Lottie from 'lottie-react';
+import animationData from '../animations/lottie/signal.json';
 
 export default function HeroImages() {
     const [isDragging, setIsDragging] = useState(false);
@@ -92,16 +94,13 @@ const handleMouseUp = () => {
         />
         <img
           ref={(ref) => (imagesRef.current[1] = ref)}
-          src="https://uploads-ssl.webflow.com/6097a2499efec713b2cb1c07/60984275a2aff775283fc930_RPS%20Hand.svg"
-          style={{ transform: `rotate(${rotation * -1}deg)` }}
+          src="images/globe.png"
+          style={{ transform: `rotate(${rotation * -1}deg)`, width: `250px`}}
           onMouseDown={(event) => handleMouseDown(event, 1)}
         />
-        <img
-          ref={(ref) => (imagesRef.current[2] = ref)}
-          src="https://uploads-ssl.webflow.com/6097a2499efec713b2cb1c07/60984282b2ffc0f517826701_RPS%20logo.svg"
-          style={{ transform: `rotate(${rotation}deg)` }}
-          onMouseDown={(event) => handleMouseDown(event, 2)}
-        />
+     
+        <Lottie style={{ transform: `rotate(${rotation}deg)`, zIndex: "9999"}}
+          onMouseDown={(event) => handleMouseDown(event, 2)} ref={(ref) => (imagesRef.current[2] = ref)} animationData={animationData} />
       </div>
     );
   }

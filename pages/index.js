@@ -65,63 +65,64 @@ export default function Home() {
   }, []);
 
 
-  const imageSources = [ 
-    "https://uploads-ssl.webflow.com/6097a2499efec713b2cb1c07/64039052a2b6534fc9500251_r.svg", 
-    "https://uploads-ssl.webflow.com/6097a2499efec713b2cb1c07/64039052a2b6531b81500250_p.svg", 
-    "https://uploads-ssl.webflow.com/6097a2499efec713b2cb1c07/64039052697b136c380d1b2c_s.svg"
-  ];
-
   const options = {
     particles: {
       number: {
-        value: 40,
+        value: 50, // Increase the number of particles
         density: {
           enable: true,
-          area: 400
+          area: 800 // Set a reasonable area for particle density
         }
       },
       color: {
         value: ["#2EB67D", "#ECB22E", "#E01E5B", "#36C5F0"]
       },
       shape: {
-        type: "image",
+        type: "circle", // Use a default shape like "circle"
         stroke: {
           width: 0,
           color: "#000000"
         },
         polygon: {
           nb_sides: 5
-        },
-        image: {
-          src: imageSources[Math.floor(Math.random() * imageSources.length)],
-          width: 150,
-          height: 150
         }
       },
       opacity: {
-        value: 0.2
+        value: 0.5, // Set the particle opacity to be more discrete
+        random: true,
+        anim: {
+          enable: false,
+          speed: 1,
+          opacity_min: 0.1,
+          sync: false
+        }
       },
       size: {
-        value: { min: 12, max: 18 }
+        value: { min: 2, max: 5 }, // Set smaller particle sizes
+        random: true,
+        anim: {
+          enable: false,
+          speed: 40,
+          size_min: 0.1,
+          sync: false
+        }
       },
       links: {
         enable: true,
         distance: 150,
         color: "#808080",
-        opacity: 0.2,
+        opacity: 0.4, // Adjust the link opacity
         width: 1
       },
       move: {
         enable: true,
-        speed: 2,
+        speed: 1, // Adjust the speed to make movement more subtle
         direction: "none",
-        random: false,
+        random: true,
         straight: false,
         outModes: "out"
       }
     },
-
-    
     interactivity: {
       events: {
         onhover: {
@@ -132,7 +133,7 @@ export default function Home() {
           enable: true,
           mode: "push"
         },
-        resize: true,
+        resize: true
       },
       modes: {
         grab: {
@@ -149,7 +150,7 @@ export default function Home() {
           speed: 3
         },
         repulse: {
-          distance: 250,
+          distance: 100, // Adjust the repulse distance to make interaction more subtle
           duration: 0.4
         },
         push: {
@@ -161,6 +162,7 @@ export default function Home() {
       }
     }
   };
+  
 
   const particlesInit = useCallback(async (engine) => {
     await loadFull(engine);
@@ -240,9 +242,9 @@ export default function Home() {
           {/* <Socials className="mt-2 laptop:mt-5" /> */}
         </div>
         <div className="mt-10 laptop:mt-40 p-2 laptop:p-0" ref={workRef}>
-          <h1 className="text-2xl text-bold">Portfolio.</h1>
+          <h1 className="text-2xl text-bold">Services.</h1>
 
-          <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-3 gap-1">
+          <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-4 gap-1">
             {data.projects.map((project) => (
               <WorkCard
               key={project.id}
